@@ -56,8 +56,7 @@ au BufReadPost *
 \ exe "norm g`\"" |
 \ endif
 
- " 컬러 스킴 사용
-colorscheme molokai
+" colorscheme molokai
 
 if has("syntax")
     syntax on

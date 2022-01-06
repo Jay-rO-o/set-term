@@ -2,7 +2,9 @@
 ZSH_CUSTOM_DIR=~/.oh-my-zsh/custom
 # - oh-my-zsh + powerlevel10k
 # install oh-my-zsh
-echo exit | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo -n "Install oh-my-zsh ..."
+echo exit | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" > /dev/null 2>&1
+echo "Done!"
 # download syntax highlight
 echo -n "Download zsh-syntax-highlighting..."
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM_DIR/plugins/zsh-syntax-highlighting > /dev/null 2>&1
@@ -41,3 +43,5 @@ echo "Done!"
 cp ./vimrc ~/.vimrc
 # install plugins
 vim +PluginInstall
+
+sed -i '/colorscheme/ s/" //' ~/.vimrc
