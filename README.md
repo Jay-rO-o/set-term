@@ -1,0 +1,4 @@
+# Run
+```bash
+$ ./bootstrap.sh
+```
