@@ -4,11 +4,17 @@ ZSH_CUSTOM_DIR=~/.oh-my-zsh/custom
 # install oh-my-zsh
 echo exit | sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # download syntax highlight
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM_DIR/plugins/zsh-syntax-highlighting
+echo -n "Download zsh-syntax-highlighting..."
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM_DIR/plugins/zsh-syntax-highlighting > /dev/null 2>&1
+echo "Done!"
 # download auto suggestion
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM_DIR/plugins/zsh-autosuggestions
+echo -n "Download zsh-autosuggestions..."
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM_DIR/plugins/zsh-autosuggestions > /dev/null 2>&1
+echo "Done!"
 # download powerlevel10k
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM_DIR/themes/powerlevel10k
+echo -n "Download powerlevel10k..."
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM_DIR/themes/powerlevel10k > /dev/null 2>&1
+echo "Done!"
 # setting plugins
 # plugins=(
 #	git
@@ -24,10 +30,13 @@ sed -i 's/plugins=(git)/plugins=(\n\tgit\n\tzsh-syntax-highlighting\n\tzsh-autos
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 sed -i '/ZSH_THEME/ s/".*"/"powerlevel10k\/powerlevel10k"/' ~/.zshrc
 # apply .zshrc
-source ~/.zshrc
+echo "Apply .zshrc"
+echo "source ~/.zshrc && exit" | zsh
 
 # download vim bundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+echo -n "Download vim vundle..."
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim > /dev/null 2>&1
+echo "Done!"
 # copy vimrc
 cp ./vimrc ~/.vimrc
 # install plugins
