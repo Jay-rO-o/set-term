@@ -24,10 +24,10 @@ echo "Done!"
 #	zsh-autosuggestions
 #	sudo
 #	history
-#	copydir
+#	copypath # copydir is deprecated
 #	copyfile
 #)
-sed -i 's/plugins=(git)/plugins=(\n\tgit\n\tzsh-syntax-highlighting\n\tzsh-autosuggestions\n\tsudo\n\thistory\n\tcopydir\n\tcopyfile\n)/' ~/.zshrc
+sed -i 's/plugins=(git)/plugins=(\n\tgit\n\tzsh-syntax-highlighting\n\tzsh-autosuggestions\n\tsudo\n\thistory\n\tcopypath\n\tcopyfile\n)/' ~/.zshrc
 # setting theme
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 sed -i '/ZSH_THEME/ s/".*"/"powerlevel10k\/powerlevel10k"/' ~/.zshrc
