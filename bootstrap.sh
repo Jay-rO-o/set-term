@@ -11,7 +11,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM_D
 echo "Done!"
 # download auto suggestion
 echo -n "Download zsh-autosuggestions..."
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM_DIR/plugins/zsh-autosuggestions > /dev/null 2>&1
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM_DIR/plugins/zsh-autosuggestions > /dev/null 2>&1
 echo "Done!"
 # download powerlevel10k
 echo -n "Download powerlevel10k..."
